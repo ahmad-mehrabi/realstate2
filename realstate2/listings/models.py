@@ -1,8 +1,8 @@
 from django.db import models
 from realtors.models import realtors
 from datetime import datetime
-class listings(models.model):
-    realtor= models.ForeignKey(realtor, on_delete=models.DO_NOTHING(collector, field, sub_objs, using))
+class listings(models.Model):
+    realtor= models.ForeignKey(realtors, on_delete=models.CASCADE)
     title= models.CharField(max_length=150, blank=True)
     address= models.TextField()
     bathroom= models.IntegerField(default=1)
