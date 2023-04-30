@@ -6,3 +6,4 @@ class realtors(models.Model):
     address= models.TextField(blank=True)
     email=models.CharField(max_length=200, blank=True)
     facebook= models.CharField(max_length=200, blank=True)
+    photo_main= models.ImageField(upload_to='profile/%Y/%m/%d', blank=True)
